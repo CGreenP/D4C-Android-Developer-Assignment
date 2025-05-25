@@ -19,7 +19,8 @@ import com.example.shopflow.model.dataclass.PromotionItem
 import com.example.shopflow.ui.theme.PrimaryContainerColor
 import com.example.shopflow.ui.theme.PrimaryGreen
 import com.example.shopflow.ui.theme.PrimaryTextColorOnSurfaceColor
-import com.example.shopflow.ui.theme.SurfaceColor
+import com.example.shopflow.ui.theme.SecondaryTextColorOnPrimaryGreen
+import com.example.shopflow.ui.theme.centuryOldStyleStdBoldFamily
 import com.example.shopflow.ui.theme.neuzeitSBookFamily
 import com.example.shopflow.ui.theme.neuzeitSltStdBookFamily
 
@@ -58,18 +59,35 @@ fun ShopScreenContent(
                     bannerContainerColor = PrimaryContainerColor,
                     bannerContentColor = PrimaryTextColorOnSurfaceColor,
                     bannerDateRangeContainerColor = PrimaryGreen,
-                    bannerDateRangeContentColor = SurfaceColor,
+                    bannerDateRangeContentColor = SecondaryTextColorOnPrimaryGreen,
                     bottomIndicatorPrimaryContainerColor = PrimaryGreen,
                     bottomIndicatorSurfaceVariantColor = PrimaryContainerColor,
                     onBannerClick = { onBannerClick(it) },
-
-                    )
+                )
+            }
+            // Category Section
+            item(
+                span = { GridItemSpan(maxLineSpan) }) {
+                CategorySection(
+                    modifier = Modifier,
+                    categories = categories,
+                    categorySectionHeaderTitle = R.string.category_section_title,
+                    categoryHeaderFontFamily = centuryOldStyleStdBoldFamily,
+                    seeAllCategoryFontFamily = neuzeitSBookFamily,
+                    categoryItemFontFamily = neuzeitSltStdBookFamily,
+                    categoryHeaderFontColor = PrimaryTextColorOnSurfaceColor,
+                    seeAllCategoryFontColor = PrimaryTextColorOnSurfaceColor,
+                    categoryItemContainerColor = PrimaryContainerColor,
+                    categoryItemFontColor = PrimaryTextColorOnSurfaceColor,
+                    onCategoryClick = { onCategoryClick(it) },
+                    onSeeAllCategoryClick = { onSeeAllCategoryClick() },
+                )
             }
         }
     }
 }
 
-@Preview(showBackground = true, name = "Shop Screen Content")
+@Preview(showBackground = false, name = "Shop Screen Content")
 @Composable
 fun ShopScreenContentPreview() {
     ShopScreenContent()

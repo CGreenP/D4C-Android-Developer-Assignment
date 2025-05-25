@@ -158,7 +158,7 @@ fun ShopFlowScreen(
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true, name = "Shop Flow Screen")
+@Preview(showBackground = false, showSystemUi = true, name = "Shop Flow Screen")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShopFlowScreenPreview() {
