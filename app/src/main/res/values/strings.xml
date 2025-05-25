@@ -10,4 +10,9 @@
 
     <!-- Promotion Banner-->
     <string name="promotion_banner_empty_state">No Promotions Available</string>
+
+    <!-- Category Section-->
+    <string name="category_section_title">Categories</string>
+    <string name="see_all_categories_button_description">See all</string>
+    <string name="category_empty_state">No Categories Available</string>
 </resources>

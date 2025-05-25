@@ -46,7 +46,7 @@ import com.example.shopflow.model.dataclass.PromotionItem
 import com.example.shopflow.ui.theme.PrimaryContainerColor
 import com.example.shopflow.ui.theme.PrimaryGreen
 import com.example.shopflow.ui.theme.PrimaryTextColorOnSurfaceColor
-import com.example.shopflow.ui.theme.SurfaceColor
+import com.example.shopflow.ui.theme.SecondaryTextColorOnPrimaryGreen
 import com.example.shopflow.ui.theme.neuzeitSBookFamily
 import com.example.shopflow.ui.theme.neuzeitSltStdBookFamily
 import kotlinx.coroutines.delay
@@ -99,7 +99,7 @@ fun PromotionBanner(
     bannerContainerColor: Color = PrimaryContainerColor,
     bannerContentColor: Color = PrimaryTextColorOnSurfaceColor,
     bannerDateRangeContainerColor: Color = PrimaryGreen,
-    bannerDateRangeContentColor: Color = SurfaceColor,
+    bannerDateRangeContentColor: Color = SecondaryTextColorOnPrimaryGreen,
     bottomIndicatorPrimaryContainerColor: Color = PrimaryGreen,
     bottomIndicatorSurfaceVariantColor: Color = PrimaryContainerColor,
     onBannerClick: (PromotionItem) -> Unit = {}
@@ -222,7 +222,7 @@ fun PromotionCard(
     bannerContainerColor: Color = PrimaryContainerColor,
     bannerContentColor: Color = PrimaryTextColorOnSurfaceColor,
     bannerDateRangeContainerColor: Color = PrimaryGreen,
-    bannerDateRangeContentColor: Color = SurfaceColor,
+    bannerDateRangeContentColor: Color = SecondaryTextColorOnPrimaryGreen,
     onBannerClick: () -> Unit = {}
 ) {
     Card(
@@ -311,13 +311,13 @@ fun PromotionCard(
     }
 }
 
-@Preview(showBackground = true, name = "Promotion Banner")
+@Preview(showBackground = false, name = "Promotion Banner")
 @Composable
 fun PromotionBannerPreview() {
     PromotionBanner(promotions = samplePromotions)
 }
 
-@Preview(showBackground = true, name = "Promotion Banner when List is empty")
+@Preview(showBackground = false, name = "Promotion Banner when List is empty")
 @Composable
 fun PromotionBannerListEmptyPreview() {
     PromotionBanner(promotions = emptyList())
