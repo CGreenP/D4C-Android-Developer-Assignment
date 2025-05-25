@@ -14,7 +14,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -24,7 +23,8 @@ import com.example.shopflow.R
 import com.example.shopflow.model.dataclass.UserMessage
 import com.example.shopflow.ui.theme.PrimaryContainerColor
 import com.example.shopflow.ui.theme.PrimaryGreen
-import com.example.shopflow.ui.theme.SecondaryTextColorOnPrimaryGreen
+import com.example.shopflow.ui.theme.PrimaryTextColorOnSurfaceColor
+import com.example.shopflow.ui.theme.SecondaryContainerColor
 import com.example.shopflow.ui.theme.SurfaceColor
 import com.example.shopflow.ui.theme.centuryOldStyleStdBoldFamily
 import com.example.shopflow.ui.theme.neuzeitSBookFamily
@@ -84,13 +84,13 @@ fun ShopFlowScreen(
                     favouriteCount = uiState.favoriteCount,
                     cartCount = uiState.cartItemCount,
                     badgeContainerColor = PrimaryGreen,
-                    badgeContentColor = SecondaryTextColorOnPrimaryGreen,
+                    badgeContentColor = SecondaryContainerColor,
                     badgeFontFamily = neuzeitSBookFamily,
                     containerColor = SurfaceColor,
                     scrolledContainerColor = PrimaryContainerColor,
-                    navigationIconContentColor = Color.White,
-                    titleContentColor = Color.White,
-                    actionIconContentColor = Color.White,
+                    navigationIconContentColor = PrimaryTextColorOnSurfaceColor,
+                    titleContentColor = PrimaryTextColorOnSurfaceColor,
+                    actionIconContentColor = PrimaryTextColorOnSurfaceColor,
                     /*
                         `onBackClick`, `onSearchClick`, etc.,
                         would likely trigger navigation actions or calls to a ViewModel
