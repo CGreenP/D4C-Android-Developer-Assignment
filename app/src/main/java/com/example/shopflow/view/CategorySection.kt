@@ -52,6 +52,7 @@ import com.example.shopflow.ui.theme.neuzeitSltStdBookFamily
  * @param categories The list of [ProductCategory] objects to display.
  * @param onCategoryClick A lambda function that is called when a category is clicked.
  * @param categorySectionHeaderTitle The resource ID for the title of the category section header.
+ * @param seeAllCategoryButtonDescription The resource ID for the description of the "See All" button.
  * @param categoryHeaderFontFamily The font family to be used for the category section header title.
  * @param seeAllCategoryFontFamily The font family to be used for the "See All" button text.
  * @param categoryItemFontFamily The font family to be used for the category item text.
@@ -67,6 +68,7 @@ fun CategorySection(
     categories: List<ProductCategory>,
     onCategoryClick: (ProductCategory) -> Unit,
     categorySectionHeaderTitle: Int = R.string.category_section_title,
+    seeAllCategoryButtonDescription: Int = R.string.see_all_categories_button_description,
     categoryHeaderFontFamily: FontFamily = centuryOldStyleStdBoldFamily,
     seeAllCategoryFontFamily: FontFamily = neuzeitSBookFamily,
     categoryItemFontFamily: FontFamily = neuzeitSltStdBookFamily,

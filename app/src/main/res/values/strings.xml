@@ -15,4 +15,19 @@
     <string name="category_section_title">Categories</string>
     <string name="see_all_categories_button_description">See all</string>
     <string name="category_empty_state">No Categories Available</string>
+
+    <!-- Product Section-->
+    <string name="product_section_title">New Products</string>
+    <string name="see_all_products_button_description">See all</string>
+    <string name="favourite_button_unselected_description">Add to Favourites</string>">
+    <string name="favourite_button_selected_description">Remove from Favourites</string>">
+    <string name="product_empty_state">No Products Available</string>
+    <string name="product_out_of_stock_state">Out of Stock</string>
+    <string name="product_in_stock_state">In Stock</string>
+    <string name="shopping_cart_button_add_to_cart_description">Add to Cart</string>">
+    <string name="shopping_cart_button_remove_from_cart_description">Remove from Cart</string>
+    <string name="filled_star_description">Filled Star</string>">
+    <string name="outlined_star_description">Outlined Star</string>
+    <string name="half_star_description">Half Star</string>"
+    <string name="review_button_description">Review</string>
 </resources>

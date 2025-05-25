@@ -238,7 +238,7 @@ fun PromotionCard(
                 .clickable(onClick = onBannerClick)
         ) {
             Image(
-                painter = painterResource(id = bannerContainer), // Flow Card PNG
+                painter = painterResource(id = bannerContainer),
                 contentDescription = "Promotion Banner Background",
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.FillBounds,
