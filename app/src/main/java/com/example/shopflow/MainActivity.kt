@@ -12,6 +12,12 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.shopflow.ui.theme.ShopFlowTheme
 import com.example.shopflow.view.ShopFlowScreen
 
+/**
+ * The main activity of the ShopFlow application.
+ *
+ * This activity is responsible for setting up the splash screen, enabling edge-to-edge display,
+ * and setting the content view to the ShopFlowScreen composable.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
