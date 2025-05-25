@@ -30,6 +30,42 @@ import com.example.shopflow.ui.theme.SurfaceColor
 import com.example.shopflow.ui.theme.centuryOldStyleStdBoldFamily
 import com.example.shopflow.ui.theme.neuzeitSBookFamily
 
+/**
+ * Composable function for the top app bar in the ShopFlow application.
+ *
+ * This top app bar displays a title, an optional back button, and action icons for search,
+ * favourites, and cart. The favourite and cart icons can display badges indicating the
+ * number of items.
+ *
+ * @param title The text to be displayed as the title of the app bar.
+ * @param titleFontFamily The font family to be used for the title text.
+ *                        Defaults to [centuryOldStyleStdBoldFamily].
+ * @param scrollBehavior A [TopAppBarScrollBehavior] that defines how the app bar behaves when
+ *                       the content below it is scrolled.
+ * @param modifier A [Modifier] to be applied to the top app bar. Defaults to [Modifier].
+ * @param showBackButton A boolean indicating whether to display the back button.
+ *                       Defaults to `true`.
+ * @param favouriteCount The number to display in the badge on the favourite icon.
+ *                       If 0, no badge is shown. Defaults to `0`.
+ * @param cartCount The number to display in the badge on the cart icon.
+ *                  If 0, no badge is shown. Defaults to `0`.
+ * @param badgeContainerColor The background color of the badges. Defaults to [PrimaryGreen].
+ * @param badgeContentColor The content color (text color) of the badges.
+ *                          Defaults to [SecondaryTextColorOnPrimaryGreen].
+ * @param badgeFontFamily The font family for the text within the badges.
+ *                        Defaults to [neuzeitSBookFamily].
+ * @param containerColor The background color of the top app bar when not scrolled.
+ *                       Defaults to [SurfaceColor].
+ * @param scrolledContainerColor The background color of the top app bar when scrolled.
+ *                               Defaults to [PrimaryContainerColor].
+ * @param navigationIconContentColor The color of the navigation icon (back button).
+ *                                   Defaults to [Color.White].
+ * @param titleContentColor The color of the title text. Defaults to [Color.White].
+ * @param actionIconContentColor The color of the action icons (search, favourite, cart).
+ *                               Defaults to [Color.White].
+ * @param onBackClick A lambda function to be invoked when the back button is clicked.
+ *                    Defaults to an empty lambda.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShopFlowTopAppBar(
@@ -117,6 +153,24 @@ fun ShopFlowTopAppBar(
     )
 }
 
+/**
+ * A composable function that displays an icon button with an optional badge.
+ *
+ * This component wraps an icon within an [IconButton] and uses [BadgedBox]
+ * to display a badge with a count if the [badgeCount] is greater than zero.
+ *
+ * @param modifier A [Modifier] to be applied to the [BadgedBox] wrapping the icon.
+ *                 Defaults to [Modifier].
+ * @param badgeCount The number to display in the badge. If 0, no badge is shown.
+ *                   Defaults to `0`.
+ * @param badgeFontFamily The font family for the text within the badge.
+ *                        Defaults to [neuzeitSBookFamily].
+ * @param badgeContainerColor The background color of the badge. Defaults to [Color.Green].
+ * @param badgeContentColor The content color (text color) of the badge.
+ *                          Defaults to [Color.Black].
+ * @param icon A composable lambda that renders the icon to be displayed.
+ * @param onClick A lambda function to be invoked when the icon button is clicked.
+ */
 @Composable
 fun BadgedIconButtonBox(
     modifier: Modifier = Modifier,
