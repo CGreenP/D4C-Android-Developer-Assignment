@@ -23,3 +23,4 @@ val SecondaryContainerColor = Color(0xFF000000)
 val AccentYellow = Color(0xFFFFD735) // Review star color
 val AccentPurple = Color(0xFFB7A2F1) // Favorite icon button color & actual price text color
 val AccentGrey = Color(0xFF7B7B7B) // Actual price text color
+val AccentRed = Color(0xFFFF5252)
