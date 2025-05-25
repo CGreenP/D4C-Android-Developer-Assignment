@@ -21,10 +21,12 @@ The application features a main screen that displays promotional banners, produc
 
 ## Screenshot
 <p align="center">
-<img src="https://github.com/user-attachments/assets/fb7970ae-51e0-4108-a588-a0acf7cd947c" width="288">
 <img src="https://github.com/user-attachments/assets/e4754b59-f96c-402b-a408-0c0f1e6ea02e" width="288">
-<img src="https://github.com/user-attachments/assets/131fd840-4170-4713-a34e-80ecfd2ac51e" width="288">
+<img src="https://github.com/user-attachments/assets/dffe4798-f420-4fe6-8f64-d365557ae886" width="288">
+<img src="https://github.com/user-attachments/assets/c4f406b5-4d91-4d2d-a13e-6aa85cdd6e10" width="288">
+<img src="https://github.com/user-attachments/assets/c5820a18-0f8e-472e-8a76-c91ba5bbe58c" width="288">
 </p>
+
 
 ## Video
 https://github.com/user-attachments/assets/8853db54-0616-444f-b78c-c7c69aac52d6
