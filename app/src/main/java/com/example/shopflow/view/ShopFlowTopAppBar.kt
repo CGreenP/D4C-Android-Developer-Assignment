@@ -25,7 +25,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.shopflow.R
 import com.example.shopflow.ui.theme.PrimaryContainerColor
 import com.example.shopflow.ui.theme.PrimaryGreen
-import com.example.shopflow.ui.theme.SecondaryTextColorOnPrimaryGreen
+import com.example.shopflow.ui.theme.PrimaryTextColorOnSurfaceColor
+import com.example.shopflow.ui.theme.SecondaryContainerColor
 import com.example.shopflow.ui.theme.SurfaceColor
 import com.example.shopflow.ui.theme.centuryOldStyleStdBoldFamily
 import com.example.shopflow.ui.theme.neuzeitSBookFamily
@@ -59,10 +60,10 @@ import com.example.shopflow.ui.theme.neuzeitSBookFamily
  * @param scrolledContainerColor The background color of the top app bar when scrolled.
  *                               Defaults to [PrimaryContainerColor].
  * @param navigationIconContentColor The color of the navigation icon (back button).
- *                                   Defaults to [Color.White].
- * @param titleContentColor The color of the title text. Defaults to [Color.White].
+ *                                   Defaults to [PrimaryTextColorOnSurfaceColor].
+ * @param titleContentColor The color of the title text. Defaults to [PrimaryTextColorOnSurfaceColor].
  * @param actionIconContentColor The color of the action icons (search, favourite, cart).
- *                               Defaults to [Color.White].
+ *                               Defaults to [PrimaryTextColorOnSurfaceColor].
  * @param onBackClick A lambda function to be invoked when the back button is clicked.
  *                    Defaults to an empty lambda.
  */
@@ -77,13 +78,13 @@ fun ShopFlowTopAppBar(
     favouriteCount: Int = 0,
     cartCount: Int = 0,
     badgeContainerColor: Color = PrimaryGreen,
-    badgeContentColor: Color = SecondaryTextColorOnPrimaryGreen,
+    badgeContentColor: Color = SecondaryContainerColor,
     badgeFontFamily: FontFamily = neuzeitSBookFamily,
     containerColor: Color = SurfaceColor,
     scrolledContainerColor: Color = PrimaryContainerColor,
-    navigationIconContentColor: Color = Color.White,
-    titleContentColor: Color = Color.White,
-    actionIconContentColor: Color = Color.White,
+    navigationIconContentColor: Color = PrimaryTextColorOnSurfaceColor,
+    titleContentColor: Color = PrimaryTextColorOnSurfaceColor,
+    actionIconContentColor: Color = PrimaryTextColorOnSurfaceColor,
     onBackClick: () -> Unit = {},
     onSearchClick: () -> Unit = {},
     onFavouriteClick: () -> Unit = {},
@@ -165,9 +166,9 @@ fun ShopFlowTopAppBar(
  *                   Defaults to `0`.
  * @param badgeFontFamily The font family for the text within the badge.
  *                        Defaults to [neuzeitSBookFamily].
- * @param badgeContainerColor The background color of the badge. Defaults to [Color.Green].
+ * @param badgeContainerColor The background color of the badge. Defaults to [PrimaryGreen].
  * @param badgeContentColor The content color (text color) of the badge.
- *                          Defaults to [Color.Black].
+ *                          Defaults to [PrimaryGreen].
  * @param icon A composable lambda that renders the icon to be displayed.
  * @param onClick A lambda function to be invoked when the icon button is clicked.
  */
@@ -176,8 +177,8 @@ fun BadgedIconButtonBox(
     modifier: Modifier = Modifier,
     badgeCount: Int = 0,
     badgeFontFamily: FontFamily = neuzeitSBookFamily,
-    badgeContainerColor: Color = Color.Green,
-    badgeContentColor: Color = Color.Black,
+    badgeContainerColor: Color = PrimaryGreen,
+    badgeContentColor: Color = SecondaryContainerColor,
     icon: @Composable () -> Unit,
     onClick: () -> Unit,
 ) {
@@ -215,13 +216,13 @@ fun ShopFlowTopAppBarPreview() {
         favouriteCount = 5,
         cartCount = 3,
         badgeContainerColor = PrimaryGreen,
-        badgeContentColor = SecondaryTextColorOnPrimaryGreen,
+        badgeContentColor = SecondaryContainerColor,
         badgeFontFamily = neuzeitSBookFamily,
         containerColor = SurfaceColor,
         scrolledContainerColor = PrimaryContainerColor,
-        navigationIconContentColor = Color.White,
-        titleContentColor = Color.White,
-        actionIconContentColor = Color.White
+        navigationIconContentColor = PrimaryTextColorOnSurfaceColor,
+        titleContentColor = PrimaryTextColorOnSurfaceColor,
+        actionIconContentColor = PrimaryTextColorOnSurfaceColor
     )
 }
 
@@ -238,12 +239,12 @@ fun ShopFlowTopAppBarPreviewNoNavNoBadges() {
         cartCount = 0,
         modifier = Modifier,
         badgeContainerColor = PrimaryGreen,
-        badgeContentColor = SecondaryTextColorOnPrimaryGreen,
+        badgeContentColor = SecondaryContainerColor,
         badgeFontFamily = neuzeitSBookFamily,
         containerColor = SurfaceColor,
         scrolledContainerColor = PrimaryContainerColor,
-        navigationIconContentColor = Color.White,
-        titleContentColor = Color.White,
-        actionIconContentColor = Color.White
+        navigationIconContentColor = PrimaryTextColorOnSurfaceColor,
+        titleContentColor = PrimaryTextColorOnSurfaceColor,
+        actionIconContentColor = PrimaryTextColorOnSurfaceColor
     )
 }
